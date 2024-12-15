@@ -1,0 +1,102 @@
+/* Variáveis globais para tema claro */
+:root {
+  --color-background: #ffffff;
+  --color-background-soft: #f4f4f4;
+  --color-background-mute: #e8e8e8;
+
+  --color-border: #dcdcdc;
+  --color-border-hover: #c0c0c0;
+
+  --color-heading: #1a1a1a;
+  --color-text: #333333;
+
+  /* Altura mínima de texto para leitura */
+  --font-size-base: 16px;
+  --font-size-large: 18px;
+
+  /* Espaçamento para leitura confortável */
+  --line-height: 1.5;
+}
+
+/* Tema escuro 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #121212;
+    --color-background-soft: #1e1e1e;
+    --color-background-mute: #2c2c2c;
+
+    --color-border: #333333;
+    --color-border-hover: #444444;
+
+    --color-heading: #e0e0e0;
+    --color-text: #bcbcbc;
+
+    --font-size-base: 16px;
+    --font-size-large: 18px;
+    --line-height: 1.6;
+  }
+}
+*/
+
+/* Suporte para usuários com preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Estilos globais para acessibilidade */
+body {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalhos com bom contraste */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  margin: 0 0 0.5em;
+}
+
+/* Links acessíveis */
+a {
+  color: var(--color-heading);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-border-hover);
+}
+
+/* Botões */
+button {
+  background-color: var(--color-background-mute);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 0.5em 1em;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-background-soft);
+  border-color: var(--color-border-hover);
+}
