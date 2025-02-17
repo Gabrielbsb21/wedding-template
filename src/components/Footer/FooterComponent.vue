@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main>
-    <p>teste</p>
-  </main>
+  <footer>
+    <p>footer</p>
+  </footer>
 </template>
