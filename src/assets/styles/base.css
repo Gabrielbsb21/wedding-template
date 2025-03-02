@@ -1,0 +1,91 @@
+:root {
+  --color-background: #ffffff;
+  --color-background-soft: #fcfdfa;
+  --color-background-mute: #f5f5f5;
+
+  --color-border: #f3ece9;
+  --color-border-hover: #e4ebf2;
+
+  --color-heading: #101010;
+  --color-heading-alt: #3f3f3f;
+  --color-text: #5c5c5c;
+  --color-text-light: #7b7b7b;
+
+  --color-primary: #657150;
+  --color-primary-light: #a5aa9c;
+  --color-primary-lighter: #c8a898;
+  --color-primary-lightest: #e5d1c7;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-dark: #333333;
+  --color-gray: #8188a9;
+  --color-cyan: #848892;
+
+  --font-size-base: 16px;
+  --font-size-large: 18px;
+  --line-height: 1.5;
+
+  --font-base: 'Jost', sans-serif;
+  --font-heading: 'Sail', cursive;
+}
+
+/* Tema escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #121212;
+    --color-background-soft: #1e1e1e;
+    --color-background-mute: #2c2c2c;
+
+    --color-border: #333333;
+    --color-border-hover: #444444;
+
+    --color-heading: #e0e0e0;
+    --color-heading-alt: #c0c0c0;
+    --color-text: #bcbcbc;
+    --color-text-light: #a0a0a0;
+
+    --color-primary: #9cb175;
+    --color-primary-light: #c1cfb3;
+    --color-primary-lighter: #e2dacb;
+    --color-primary-lightest: #f2e6db;
+
+    --color-white: #e0e0e0;
+    --color-black: #000000;
+    --color-gray-dark: #555555;
+    --color-gray: #7b7b7b;
+    --color-cyan: #9aa1b3;
+
+    --font-size-base: 16px;
+    --font-size-large: 18px;
+    --line-height: 1.6;
+  }
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+}
+
+/* Suporte para usuários com preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
