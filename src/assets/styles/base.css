@@ -28,6 +28,13 @@
 
   --font-base: 'Jost', sans-serif;
   --font-heading: 'Sail', cursive;
+
+  --container-width-xs: 540px;
+  --container-width-sm: 640px;
+  --container-width-md: 768px;
+  --container-width-lg: 1024px;
+  --container-width-xl: 1280px;
+  --container-width-2xl: 1536px;
 }
 
 /* Tema escuro */
@@ -76,6 +83,46 @@ h5,
 h6 {
   font-family: var(--font-heading);
   color: var(--color-heading);
+}
+
+/* Classes de Container */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container-sm {
+  max-width: var(--container-width-sm);
+}
+
+.container-md {
+  max-width: var(--container-width-md);
+}
+
+.container-lg {
+  max-width: var(--container-width-lg);
+}
+
+.container-xl {
+  max-width: var(--container-width-xl);
+}
+
+.container-2xl {
+  max-width: var(--container-width-2xl);
+}
+
+.visuallyhidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
 }
 
 /* Suporte para usuários com preferência por menos movimento */
